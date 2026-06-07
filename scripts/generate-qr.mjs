@@ -57,16 +57,14 @@ const qrSize = 620;
 
 const cardSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">
   <rect width="${W}" height="${H}" fill="#F4F2EC"/>
-  <g transform="translate(${W / 2} 150)" text-anchor="middle">
-    <text x="0" y="-4" font-family="${FONT}" font-size="24" letter-spacing="6" fill="#3C5A47" font-weight="600">TE KOOP</text>
-    <text x="0" y="78" font-family="${FONT}" font-size="62" font-weight="600" letter-spacing="-1.5" fill="#1B1C1A">Volvo XC90 V8</text>
-    <text x="0" y="146" font-family="${FONT}" font-size="62" font-weight="600" letter-spacing="-1.5" fill="#1B1C1A">Executive</text>
-    <text x="0" y="214" font-family="${FONT}" font-size="30" font-weight="400" fill="#62655D">Scan voor alle info en foto&#39;s</text>
+  <g transform="translate(${W / 2} 184)" text-anchor="middle">
+    <text x="0" y="0" font-family="${FONT}" font-size="76" letter-spacing="12" fill="#3C5A47" font-weight="700">TE KOOP</text>
+    <text x="0" y="108" font-family="${FONT}" font-size="62" font-weight="600" letter-spacing="-1.5" fill="#1B1C1A">Volvo XC90 V8</text>
+    <text x="0" y="176" font-family="${FONT}" font-size="62" font-weight="600" letter-spacing="-1.5" fill="#1B1C1A">Executive</text>
   </g>
   <rect x="${cardX}" y="${cardY}" width="${cardSize}" height="${cardSize}" rx="36" fill="#FFFFFF" stroke="#E2DFD6" stroke-width="2"/>
   <image href="${qrData}" x="${(W - qrSize) / 2}" y="${cardY + (cardSize - qrSize) / 2}" width="${qrSize}" height="${qrSize}"/>
-  <text x="${W / 2}" y="${cardY + cardSize + 80}" text-anchor="middle" font-family="${FONT}" font-size="34" font-weight="500" fill="#3C5A47">xc90-v8-verkoop.netlify.app</text>
-  <text x="${W / 2}" y="${cardY + cardSize + 130}" text-anchor="middle" font-family="${FONT}" font-size="26" font-weight="400" fill="#62655D">Theun Kok</text>
+  <text x="${W / 2}" y="${cardY + cardSize + 96}" text-anchor="middle" font-family="${FONT}" font-size="46" font-weight="600" fill="#3C5A47">Scan voor alle info</text>
 </svg>`;
 
 await sharp(Buffer.from(cardSvg)).png().toFile(join(desktop, "xc90-qrcode-print.png"));
