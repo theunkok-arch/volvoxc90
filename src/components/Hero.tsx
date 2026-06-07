@@ -7,7 +7,7 @@ import { ArrowIcon, LeafIcon } from "./Icons";
 const titleSegments = [
   "Volvo XC90 V8 Executive",
   "Youngtimer met 35% bijtelling",
-  "Full Options",
+  "7-zitter, Full Options",
 ];
 
 export default function Hero() {

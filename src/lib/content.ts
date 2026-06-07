@@ -8,7 +8,7 @@ export const kerngegevens: { label: string; value: string }[] = [
   { label: "Motor", value: "4.4 V8 (Yamaha), soepel en krachtig" },
   { label: "Uitvoering", value: "Executive (topuitvoering)" },
   { label: "Bouwjaar", value: "2005" },
-  { label: "Kilometerstand", value: "202.000 km (exact)" },
+  { label: "Kilometerstand", value: "205.000 km (exact)" },
   { label: "APK", value: "tot 04-2027" },
   { label: "Plaatsen", value: "7 zitplaatsen, AWD" },
 ];
