@@ -1,3 +1,5 @@
+import { VolvoMark } from "./VolvoLogo";
+
 const links = [
   { href: "#auto", label: "De auto" },
   { href: "#uitrusting", label: "Uitrusting" },
@@ -9,13 +11,13 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-40 border-b border-hair/70 bg-paper/85 backdrop-blur-md">
       <div className="container-x flex h-16 items-center justify-between gap-4">
-        <a
-          href="#top"
-          className="flex items-baseline gap-2 font-medium tracking-tightish text-ink"
-        >
-          <span className="text-base">Volvo XC90</span>
+        <a href="#top" className="flex items-center gap-2.5">
+          <VolvoMark className="h-7 w-7 text-ink" />
+          <span className="text-[1.05rem] font-semibold tracking-[0.22em] text-ink">
+            VOLVO
+          </span>
           <span className="rounded bg-forest-50 px-1.5 py-0.5 text-xs font-semibold text-forest">
-            V8
+            XC90 V8
           </span>
         </a>
 

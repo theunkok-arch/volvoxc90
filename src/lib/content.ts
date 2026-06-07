@@ -54,6 +54,7 @@ export const uitrusting: UitrustingCategorie[] = [
 // -- Fiscaal blok ------------------------------------------------------------
 export const fiscaal = {
   kop: "Fiscaal voordeel: aantrekkelijke Youngtimer",
+  bedrag: "Ongeveer € 2.800 bruto bijtelling per jaar",
   punten: [
     "35% bijtelling over de dagwaarde, niet over de nieuwprijs",
     "Daardoor een lage maandlast voor zakelijk rijden",
@@ -62,6 +63,9 @@ export const fiscaal = {
   afsluiter:
     "Voor de ondernemer een interessante manier om voordelig in een V8 te rijden. Check je eigen situatie even met je boekhouder.",
 };
+
+// Extraatje dat gratis bij de auto zit.
+export const inclusief = "Inclusief een extra set originele Volvo velgen, gratis erbij.";
 
 // -- Intro -------------------------------------------------------------------
 export const intro =
@@ -72,6 +76,3 @@ export const contactTekst = {
   kop: "Interesse?",
   body: "Bezichtiging en een proefrit zijn welkom, zodat je de auto rustig kunt bekijken. Op serieuze biedingen reageer ik altijd. Vragen of een afspraak maken? Stuur gerust een bericht.",
 };
-
-// -- Foto's ------------------------------------------------------------------
-export const fotoNote = "Hogere resolutie foto's volgen nog.";

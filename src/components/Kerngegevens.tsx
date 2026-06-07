@@ -6,9 +6,6 @@ export default function Kerngegevens() {
       <div className="max-w-2xl">
         <p className="eyebrow">Kerngegevens</p>
         <h2 className="section-title mt-3">De feiten op een rij</h2>
-        <p className="mt-3 text-muted">
-          Kort en zakelijk. Geen verrassingen, wel een eerlijk beeld.
-        </p>
       </div>
 
       <dl className="mt-10 grid grid-cols-1 gap-px overflow-hidden rounded-2xl border border-hair bg-hair sm:grid-cols-2 lg:grid-cols-3">

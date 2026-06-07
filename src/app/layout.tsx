@@ -14,7 +14,7 @@ const mona = localFont({
 
 const title = "Volvo XC90 V8 Executive | Youngtimer 35% bijtelling | Full Options";
 const description =
-  "Te koop: ruime en comfortabele Volvo XC90 met de 4.4 V8 (Yamaha), Executive uitvoering, bouwjaar 2005, 202.000 km, APK tot 04-2027, 7 zitplaatsen en AWD. Aantrekkelijke youngtimer met 35% bijtelling.";
+  "Te koop: ruime en comfortabele Volvo XC90 met de 4.4 V8 (Yamaha), Executive uitvoering, bouwjaar 2005, 202.000 km, APK tot 04-2027, 7 zitplaatsen en AWD. Aantrekkelijke youngtimer met 35% bijtelling. Vraagprijs € 14.500.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),

@@ -1,7 +1,7 @@
 import Image from "next/image";
-import { intro, fotoNote } from "@/lib/content";
+import { intro, inclusief } from "@/lib/content";
 import { priceLabel } from "@/lib/site";
-import { ArrowIcon } from "./Icons";
+import { ArrowIcon, LeafIcon } from "./Icons";
 
 // H1 is overgenomen zoals aangeleverd, inclusief de scheidingstekens.
 const titleSegments = [
@@ -14,7 +14,7 @@ export default function Hero() {
   return (
     <section id="top" className="relative overflow-hidden">
       <div className="container-x pt-12 pb-10 sm:pt-16 lg:pt-20">
-        <div className="grid items-center gap-10 lg:grid-cols-[1.05fr_1fr] lg:gap-14">
+        <div className="grid items-center gap-10 xl:grid-cols-[1.1fr_1fr] xl:gap-14">
           {/* Copy */}
           <div className="animate-fade-up">
             <p className="eyebrow">
@@ -22,13 +22,10 @@ export default function Hero() {
               Youngtimer, 35% bijtelling
             </p>
 
-            <h1 className="mt-5 text-[2.1rem] font-medium leading-[1.08] tracking-tightish text-ink sm:text-5xl lg:text-[3.4rem]">
-              {titleSegments.map((seg, i) => (
-                <span key={seg}>
+            <h1 className="mt-5 font-medium leading-[1.12] tracking-tightish text-ink text-[clamp(1.3rem,4.6vw,2.35rem)]">
+              {titleSegments.map((seg) => (
+                <span key={seg} className="block">
                   {seg}
-                  {i < titleSegments.length - 1 && (
-                    <span className="font-light text-muted"> | </span>
-                  )}
                 </span>
               ))}
             </h1>
@@ -38,7 +35,20 @@ export default function Hero() {
             </p>
 
             {priceLabel && (
-              <p className="mt-6 text-lg font-medium text-ink">{priceLabel}</p>
+              <div className="mt-7">
+                <div className="flex items-baseline gap-3">
+                  <span className="text-sm uppercase tracking-[0.14em] text-muted">
+                    Vraagprijs
+                  </span>
+                  <span className="text-3xl font-semibold text-ink sm:text-4xl">
+                    {priceLabel}
+                  </span>
+                </div>
+                <p className="mt-2.5 inline-flex items-center gap-2 rounded-full bg-forest-50 px-3.5 py-1.5 text-sm font-medium text-forest">
+                  <LeafIcon className="h-4 w-4 shrink-0" />
+                  {inclusief}
+                </p>
+              </div>
             )}
 
             <div className="mt-8 flex flex-wrap items-center gap-3">
@@ -55,20 +65,15 @@ export default function Hero() {
           {/* Hero image in a soft, rounded paper frame */}
           <div className="animate-fade-up [animation-delay:120ms]">
             <figure className="rounded-[1.75rem] border border-hair bg-card p-2.5 shadow-lift">
-              <div className="relative aspect-[16/10] overflow-hidden rounded-[1.3rem] bg-forest-50">
-                <Image
-                  src="/images/side.jpg"
-                  alt="Volvo XC90 V8 Executive in grijsmetallic, zijaanzicht, geparkeerd op een erf"
-                  fill
-                  priority
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                  className="object-cover"
-                />
-              </div>
-              <figcaption className="flex items-center gap-2 px-2 pt-2.5 pb-1 text-xs text-muted">
-                <span className="inline-block h-1.5 w-1.5 rounded-full bg-forest/70" />
-                {fotoNote}
-              </figcaption>
+              <Image
+                src="/images/side.jpg"
+                alt="Volvo XC90 V8 Executive in grijsmetallic, volledig zijaanzicht"
+                width={2000}
+                height={966}
+                priority
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="h-auto w-full rounded-[1.3rem] bg-forest-50"
+              />
             </figure>
           </div>
         </div>

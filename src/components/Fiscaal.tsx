@@ -22,6 +22,9 @@ export default function Fiscaal() {
               <h2 className="mt-3 text-2xl font-medium leading-snug tracking-tightish text-ink sm:text-[1.7rem]">
                 {fiscaal.kop}
               </h2>
+              <p className="mt-3 inline-flex items-center justify-center rounded-full bg-forest px-5 py-2 text-center text-sm font-semibold text-cream">
+                {fiscaal.bedrag}
+              </p>
             </div>
           </div>
 

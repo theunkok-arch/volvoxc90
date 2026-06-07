@@ -1,5 +1,5 @@
 import { contactTekst } from "@/lib/content";
-import { contact } from "@/lib/site";
+import { contact, sellerName } from "@/lib/site";
 import { PhoneIcon, WhatsAppIcon, MailIcon } from "./Icons";
 
 export default function Contact() {
@@ -38,7 +38,7 @@ export default function Contact() {
       </div>
 
       <p className="mt-6 text-center text-sm text-muted">
-        Of rechtstreeks:{" "}
+        Of rechtstreeks: <span className="text-ink">{sellerName}</span>,{" "}
         <a href={contact.phoneHref} className="text-forest hover:underline">
           {contact.phoneDisplay}
         </a>{" "}

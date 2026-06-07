@@ -9,21 +9,22 @@
 // (Open Graph). Pas aan naar je definitieve domein zodra je dat hebt.
 export const SITE_URL = "https://xc90-v8-verkoop.netlify.app";
 
-export const contact = {
-  // Telefoon. phoneHref in internationaal formaat (zonder spaties).
-  phoneDisplay: "06 12 34 56 78",
-  phoneHref: "tel:+31612345678",
+// Naam van de verkoper (getoond bij contact en in de footer).
+export const sellerName = "Theun Kok";
 
-  // WhatsApp. Nummer in internationaal formaat zonder + of spaties.
-  whatsappHref: "https://wa.me/31612345678",
+export const contact = {
+  // Telefoon. phoneHref in internationaal formaat (zodat een iPhone direct belt).
+  phoneDisplay: "06 12 02 38 20",
+  phoneHref: "tel:+31612023820",
+
+  // WhatsApp. Zelfde nummer, internationaal formaat zonder + of spaties.
+  whatsappHref: "https://wa.me/31612023820",
 
   // E-mail. Het onderwerp staat alvast klaar voor de geinteresseerde.
-  emailDisplay: "jouw@email.nl",
+  emailDisplay: "theunkok@gmail.com",
   emailHref:
-    "mailto:jouw@email.nl?subject=Interesse%20Volvo%20XC90%20V8%20Executive",
+    "mailto:theunkok@gmail.com?subject=Interesse%20Volvo%20XC90%20V8%20Executive",
 };
 
-// Vraagprijs is bewust niet hard in de site gezet. Wil je een prijs tonen,
-// vul die hier in (bijv. "Vraagprijs op aanvraag" of een bedrag) en hij
-// verschijnt in de hero. Laat leeg ("") om niets te tonen.
-export const priceLabel = "";
+// Vraagprijs. Verschijnt prominent in de hero. Laat leeg ("") om niets te tonen.
+export const priceLabel = "€ 14.500";
