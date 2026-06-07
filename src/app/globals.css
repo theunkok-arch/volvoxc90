@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    /* offset anchor targets for the sticky header */
+    scroll-padding-top: 5rem;
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    @apply bg-paper text-ink antialiased;
+    font-feature-settings: "ss01", "cv01";
+  }
+
+  /* Each section sits clear of the sticky header when navigated to */
+  section[id] {
+    scroll-margin-top: 5rem;
+  }
+
+  ::selection {
+    background-color: #3c5a47;
+    color: #fbf8f0;
+  }
+
+  :focus-visible {
+    outline: 2px solid #3c5a47;
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+}
+
+@layer components {
+  .container-x {
+    @apply mx-auto w-full max-w-content px-5 sm:px-8;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-xs font-medium uppercase tracking-[0.18em] text-forest;
+  }
+
+  .section-title {
+    @apply text-3xl font-medium tracking-tightish text-ink sm:text-4xl;
+  }
+
+  /* Buttons (pill). Primary = solid forest green, secondary = outline. */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full text-[0.95rem] font-medium transition-colors duration-200 px-6 py-3;
+  }
+  .btn-primary {
+    @apply btn bg-forest text-cream hover:bg-forest-700;
+  }
+  .btn-secondary {
+    @apply btn border border-hair bg-card text-ink hover:border-forest hover:text-forest;
+  }
+  .btn-sm {
+    @apply px-4 py-2 text-sm;
+  }
+
+  .card {
+    @apply rounded-2xl border border-hair bg-card shadow-soft;
+  }
+
+  .link-quiet {
+    @apply text-muted transition-colors hover:text-forest;
+  }
+}
+
+/* Subtle, performance-friendly entrance. Disabled for reduced-motion users. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .animate-fade-up {
+    animation: none !important;
+  }
+}
